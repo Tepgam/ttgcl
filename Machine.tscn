@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgscwh5pkos8o"]
+
+[ext_resource type="PackedScene" uid="uid://bqpfstewg6ps2" path="res://ball.tscn" id="1_ljth3"]
+[ext_resource type="PackedScene" uid="uid://d7jqmoxx2ret" path="res://Paddle.tscn" id="2_h6uum"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ball_rigidbody" parent="." instance=ExtResource("1_ljth3")]
+position = Vector2(-55, -100)
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("2_h6uum")]
+position = Vector2(-132, 36)
+min_angle_deg = 30.0
+max_angle_deg = -60.0
+paddle_ascent_rate = 10.0
+paddle_descent_rate = 5.0
+input = "ui_left"
+
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("2_h6uum")]
+position = Vector2(112, 45)
+min_angle_deg = 150.0
+max_angle_deg = 240.0
+paddle_ascent_rate = 10.0
+paddle_descent_rate = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="."]

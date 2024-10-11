@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d7jqmoxx2ret"]
+
+[ext_resource type="Script" path="res://Paddle.gd" id="1_r22rb"]
+[ext_resource type="Texture2D" uid="uid://dj3ou05j12fbk" path="res://icon.svg" id="2_vhtir"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_he2ar"]
+height = 100.0
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_r22rb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(40, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_he2ar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(50, 0)
+scale = Vector2(1, 0.2)
+texture = ExtResource("2_vhtir")
